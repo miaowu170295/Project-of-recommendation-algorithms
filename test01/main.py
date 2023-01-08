@@ -9,10 +9,6 @@ import math
 the set MovieLens 100K
 set URL: https://grouplens.org/datasets/movielens/100k/
 '''
-<<<<<<< HEAD
-
-=======
->>>>>>> 4c74cc5 (Initial commit)
 '''
     R:User-item corresponding co-occurrence matrix m*n
     P:user-factor matrix m*k
@@ -22,7 +18,6 @@ set URL: https://grouplens.org/datasets/movielens/100k/
     alpha:learning rate
     Lambda:weighting factor for L2 regularization
 '''
-
 
 # Decompose the matrix R into P,Q
 def matrix_factorization(R, P, Q, K, steps, alpha=0.05, Lambda=0.002):
@@ -72,7 +67,6 @@ def matrix_factorization(R, P, Q, K, steps, alpha=0.05, Lambda=0.002):
     print(f'--------Summary---------\nThe type of jump out:{flag}\nTotal steps:{step+1}\nTotal time:{sum_st}\n'
           f'Average time:{sum_st / (step+1)}\nThe e is :{e_new}')
     return P, Q
-
 
 # view
 def view_data():
@@ -253,13 +247,9 @@ def test(path, trainData, testData, all_item, k):
     et = time.time()
     print("HR@10:%.4f\nMRR@10:%.4f\nNDCG@10:%.4f\nTotal time:%.4f" % (HR, MRR, NDCG, et-st))
 
-
 if __name__ == '__main__':
     rtnames = ['user', 'item', 'score', 'time']
     path = "C:\\Desktop\\test01 of project\\ml-100k"
     rating, trainData, testData, all_user, all_item = getData(path, rtnames)
     # train(path, rating, 30, 10)
     test(path, trainData, testData, all_item, 10)
-
-
-
