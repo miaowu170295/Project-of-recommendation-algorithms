@@ -9,7 +9,10 @@ import math
 the set MovieLens 100K
 set URL: https://grouplens.org/datasets/movielens/100k/
 '''
+<<<<<<< HEAD
 
+=======
+>>>>>>> 4c74cc5 (Initial commit)
 '''
     R:User-item corresponding co-occurrence matrix m*n
     P:user-factor matrix m*k
